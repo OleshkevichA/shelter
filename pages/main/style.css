@@ -26,7 +26,7 @@ html.active {
 }
 
 .header-container {
-  padding: 35px 40px 37px 40px;
+  padding: 6px 40px 67px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -123,7 +123,7 @@ html.active {
   font-size: 15px;
   line-height: 24px;
   text-align: left;
-  padding: 0 30px 44px 0;
+  padding: 2px 30px 44px 0;
 }
 
 .btn {
@@ -182,7 +182,7 @@ html.active {
   font-size: 15px;
   line-height: 24px;
   margin: 5px 0;
-  padding: 18px 0 0;
+  padding: 20px 0 0;
   color: #4C4C4C;
 }
 
@@ -426,9 +426,9 @@ html.active {
   display: grid;
   padding: 40px 40px 0;
   justify-content: space-between;
-  grid-template-columns: 440px 1fr 1fr; 
+  grid-template-columns: 440px 1fr 1fr;
   align-items: start;
-  justify-items: end; 
+  justify-items: end;
 }
 
 .footer-title {
@@ -531,7 +531,7 @@ html.active {
 
 .hamburger:hover .line{
   background-color: #BDAE82;;
-} 
+}
 
 .hamburger {
   cursor: pointer;
@@ -757,12 +757,12 @@ html.active {
     justify-content: space-between;
     padding: 2px 0px;
   }
-  
+
   @keyframes move-left {
     from {left: -620px;}
     to  {left: 0px;}
   }
-  
+
   @keyframes move-right{
     from {left: -620px}
     to  {left: -1240px}
@@ -826,7 +826,7 @@ html.active {
 
   .donate-description-side {
     padding: 0 75px 0 64px;
-    
+
   }
 
   .donate-title {
@@ -912,44 +912,44 @@ html.active {
     margin: 0;
     padding: 0px 0 0 0;
   }
-  
+
   .popup-kinds {
     font-size: 20px;
     padding: 10px 0 0px 0;
   }
-  
+
   .popup-discr {
     font-size: 13px;
     line-height: 14.3px;
     margin: 0;
   }
-  
+
   .popup-details {
     padding: 33px 0 0 0;
     margin: 0;
   }
-  
+
   .popup-details li {
     list-style-type: none;
     padding: 2px 0;
   }
-  
+
   .popup-details li::before {
     content: "\00B7";
     color: #F1CDB3;
     padding: 0 10px 0 0;
   }
-  
+
   .popup-close {
     top: -52px;
     right: -43px;
   }
-  
+
   .popup-close:hover {
     transition: 0.5s;
     background-color: #FDDCC4;
   }
-  
+
   .li-bold {
     font-size: 15px;
     line-height: 16.5px;
@@ -1113,12 +1113,12 @@ html.active {
     justify-content: space-between;
     padding: 2px 0px;
   }
-  
+
   @keyframes move-left {
     from {left: -310px;}
     to  {left: 0px;}
   }
-  
+
   @keyframes move-right{
     from {left: -310px;}
     to  {left: -620px;}
@@ -1275,26 +1275,26 @@ html.active {
     border-radius: 9px;
     transform: scale(1);
   }
-  
+
   .popup-title {
     text-align: center;
     padding: 0px 0 0 0;
   }
-  
+
   .popup-kinds {
     text-align: center;
     padding: 10px 0 20px 0;
   }
-  
+
   .popup-details {
     padding: 20px 0 0 0;
   }
-  
+
   .popup-close {
     top: -52px;
     right: -31px;
   }
-  
+
 }
 
 
