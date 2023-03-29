@@ -116,7 +116,8 @@ main {
 
 .nav-item-link:active {
   transition: 0.2s;
-  color: #e0c8c8;
+  color: #292929;
+  border-bottom: 3px solid #F1CDB3;
 }
 
 .choosen {
