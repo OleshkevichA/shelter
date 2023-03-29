@@ -18,8 +18,8 @@ body {
 }
 
 .header .container {
-  max-width: 100%;
-  position: fixed;
+  max-width: 1280px;
+  /*position: fixed;*/
   margin: 0 auto;
   width: 100%;
   z-index: 1;
@@ -37,7 +37,7 @@ main {
 
 .header-container {
   background-color: #FFFFFF;
-  padding: 5px 40px 30px;
+  padding: 5px 40px 27px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -171,7 +171,7 @@ main {
 
 .our-friends {
   background-color: #F6F6F6;
-  padding: 120px 40px 101px 40px;
+  padding: 0px 40px 101px 40px;
 }
 
 .friends-container {
