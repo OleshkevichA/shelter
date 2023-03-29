@@ -114,10 +114,19 @@ main {
   color: #292929;
 }
 
+.nav-item-link:active {
+  transition: 0.2s;
+  color: #e0c8c8;
+}
+
 .choosen {
   color: #292929;
   border-bottom: 3px solid #F1CDB3;
   cursor: default;
+}
+
+.choosen:active {
+  color: #292929;
 }
 
 .container-hamburger {
@@ -228,6 +237,11 @@ main {
   background-color: #FAFAFA;
 }
 
+.slider-item-btn:active{
+  transition: 0.4s;
+  border:2px solid #ffcaa4;
+}
+
 .btn-container {
   display: flex;
   justify-content: center;
@@ -275,6 +289,13 @@ main {
   background-color: #FDDCC4;
   border: 2px solid #FDDCC4;
   color: rgb(14, 13, 13);
+}
+
+.btn-nav:nth-child(4):active,
+.btn-nav:nth-child(5):active {
+  transition: 0.5s;
+  background-color: #FDDCC4;
+  border: 2px solid #f5ae7b;
 }
 
 .footer {
@@ -335,6 +356,22 @@ main {
   line-height: 23px;
   color: #F1CDB3;
   letter-spacing: 1.5px;
+}
+
+.footer-navigation-left .footer-navigation-item:hover,
+.footer-navigation-center .footer-navigation-item:hover,
+.footer-navigation-left .footer-navigation-item:active,
+.footer-navigation-center .footer-navigation-item:active
+ {
+  transition: 0.5s;
+  box-shadow: 0px 2px 10px brown;
+}
+
+.footer-navigation-left .footer-navigation-item:active,
+.footer-navigation-center .footer-navigation-item:active
+ {
+  transition: 0.5s;
+  box-shadow: 0px 1px 5px brown;
 }
 
 .mail,
