@@ -93,7 +93,9 @@ html.active {
 }
 
 .nav-item-link:active {
-  color: #aca2a2;
+  transition: 0.1s;
+  color: #FAFAFA;
+  border-bottom: 3px solid #F1CDB3;
 }
 
 .choosen {
