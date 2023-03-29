@@ -88,11 +88,6 @@ let petsarr = [
     "parasites": ["lice", "fleas"]
   }
 ];
-console.log(`Нешта пагінацыя даецца з прабуксоўкай. 
-Зрабіў зусім няшмат. 
-Дзякуй за чаканне. 
-Прыйдзецца дарабляць ужо пасля крос-чэка. 
-Усім удачы!`);
 const hamburger = document.querySelector('.hamburger');
 const headerNavigationBlock = document.querySelector('.header-navigation-block');
 const headerNameBlock = document.querySelector('.header-name-block');
@@ -124,7 +119,7 @@ let parasites = document.querySelector('.parasites');
 let start = fetch(url)
   .then((result) => result.json())
     .then((data) => {
-           
+
       let arr = [];
       function checkNumber(arg){
         let number = getRandomInteger();
@@ -139,19 +134,19 @@ let start = fetch(url)
           checkNumber(arg);
         }
       }
-     
+
       for (let i = 0; i < 3; i++){
         checkNumber(active.children[i]);
       }
-      
+
       for (let i = 0; i < 3; i++){
         checkNumber(left.children[i]);
-      } 
+      }
       right.children[2].setAttribute('data-pet', arr[3]);
       right.children[2].children[1].textContent = data[arr[3]].name;
       right.children[2].children[0].setAttribute('src', `${data[arr[3]].img}`);
       right.children[2].children[0].setAttribute('alt', `${data[arr[3]].name}`);
-      
+
       for (let i = 0; i < 2; i++){
         checkNumber(right.children[i]);
       }
@@ -176,14 +171,14 @@ const moveLeft = () => {
   wrapperSlider.classList.add('transition-left');
   leftButton.removeEventListener('click', moveLeft);
   rightButton.removeEventListener('click', moveRight);
-  
+
 }
 // movement right
 const moveRight = () => {
   wrapperSlider.classList.add('transition-right');
   rightButton.removeEventListener('click', moveRight);
   leftButton.removeEventListener('click', moveLeft);
-  
+
 }
 
 leftButton.addEventListener('click', moveLeft);
@@ -196,12 +191,12 @@ wrapperSlider.addEventListener('animationend', (animationEvent) => {
    if (animationEvent.animationName === 'move-left'){
     const leftItems = document.querySelector('.left-slider-block').innerHTML;
     document.querySelector('.active-slider-block').innerHTML = leftItems;
-        
+
     let arr = [];
     for (let i = 0; i < 3; i++){
-      arr.push(+active.children[i].getAttribute('data-pet')); 
+      arr.push(+active.children[i].getAttribute('data-pet'));
     }
-    
+
     function checkNumber(arg){
       let number = getRandomInteger();
       if (!arr.includes(number)){
@@ -218,12 +213,12 @@ wrapperSlider.addEventListener('animationend', (animationEvent) => {
 
     for (let i = 0; i < 3; i++){
       checkNumber(left.children[i]);
-    } 
+    }
     right.children[2].setAttribute('data-pet', arr[3]);
     right.children[2].children[1].textContent = petsarr[arr[3]].name;
     right.children[2].children[0].setAttribute('src', `${petsarr[arr[3]].img}`);
     right.children[2].children[0].setAttribute('alt', `${petsarr[arr[3]].name}`);
-    
+
     for (let i = 0; i < 2; i++){
       checkNumber(right.children[i]);
     }
@@ -235,9 +230,9 @@ wrapperSlider.addEventListener('animationend', (animationEvent) => {
 
     let arr = [];
     for (let i = 0; i < 3; i++){
-      arr.push(+active.children[i].getAttribute('data-pet')); 
+      arr.push(+active.children[i].getAttribute('data-pet'));
     }
-    
+
     function checkNumber(arg){
       let number = getRandomInteger();
       if (!arr.includes(number)){
@@ -254,12 +249,12 @@ wrapperSlider.addEventListener('animationend', (animationEvent) => {
 
     for (let i = 0; i < 3; i++){
       checkNumber(left.children[i]);
-    } 
+    }
     right.children[2].setAttribute('data-pet', arr[3]);
     right.children[2].children[1].textContent = petsarr[arr[3]].name;
     right.children[2].children[0].setAttribute('src', `${petsarr[arr[3]].img}`);
     right.children[2].children[0].setAttribute('alt', `${petsarr[arr[3]].name}`);
-    
+
     for (let i = 0; i < 2; i++){
       checkNumber(right.children[i]);
     }
@@ -297,7 +292,7 @@ function openModalWindow(event) {
   inoculations.textContent = ` ${petsarr[number].inoculations}`;
   diseases.textContent = ` ${petsarr[number].diseases}`;
   parasites.textContent = ` ${petsarr[number].parasites}`;
- 
+
   popup.classList.toggle('activate');
   body.classList.toggle('active')
   html.classList.toggle('active')
