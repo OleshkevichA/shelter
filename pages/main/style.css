@@ -6,11 +6,13 @@ body {
   font-family: Georgia;
   font-weight: 400;
 }
+
+
 /*
 body.active,
 html.active {
     overflow-y: hidden;
-  }
+}
 */
 
 .container {
@@ -208,7 +210,12 @@ html.active {
 
 .our-friends {
   background-color: #F6F6F6;
-  padding: 0 0 117px 0;
+  padding: 0 0 102px 0;
+}
+
+.our-friends .container {
+  display: flex;
+  flex-direction: column;
 }
 
 .friends-title {
@@ -222,7 +229,7 @@ html.active {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px 55px 40px;
+  padding: 0 40px 40px 40px;
 }
 
 .slider-content{
