@@ -6,11 +6,12 @@ body {
   font-family: Georgia;
   font-weight: 400;
 }
-
+/*
 body.active,
 html.active {
     overflow-y: hidden;
   }
+*/
 
 .container {
   max-width: 1280px;
@@ -89,10 +90,18 @@ html.active {
   color: #FAFAFA;
 }
 
+.nav-item-link:active {
+  color: #aca2a2;
+}
+
 .choosen {
   color: #FAFAFA;
   border-bottom: 3px solid #F1CDB3;
   cursor:default;
+}
+
+.choosen:active {
+  color: #FAFAFA;
 }
 
 .wrapper-not-only {
@@ -159,10 +168,19 @@ html.active {
   background-color: #FDDCC4;
 }
 
+.btn:active {
+  transition: 0.5s;
+  background-color: #fac6a0;
+}
+
 .about {
-  display: flex;
   padding: 80px 215px 100px;
+}
+
+.about .container {
+  display: flex;
   gap: 0 120px;
+  justify-content: center;
 }
 
 .about-wrap {
@@ -290,6 +308,11 @@ html.active {
   border:2px solid #FDDCC4;
 }
 
+.slider-button:active{
+  transition: 0.4s;
+  border:2px solid #ffcaa4;
+}
+
 .slider-item-name {
   text-align: center;
   font-size: 20px;
@@ -312,6 +335,11 @@ html.active {
   display: block;
   margin: 0 auto;
   background-color: #FAFAFA;
+}
+
+.slider-item-btn:active {
+  transition: 0.5s;
+  box-shadow: 0 0px 3px black;
 }
 
 .our-btn {
@@ -355,9 +383,12 @@ html.active {
 
 .donate-section {
   background-color: #F6F6F6;
+  padding: 83px 180px 100px;
+}
+
+.donate-section .container {
   display: flex;
   justify-content: center;
-  padding: 83px 180px 100px;
 }
 
 .donate-title {
@@ -398,9 +429,15 @@ html.active {
 }
 
 .pay-btn:hover {
-  transition: 0.2s;
+  transition: 0.3s;
   background-color: #F1CCBE;
   box-shadow: 1px 1px 5px;
+}
+
+.pay-btn:active {
+  transition: 0.3s;
+  background-color: #F1CCBE;
+  box-shadow: 1px 1px 3px;
 }
 
 .donate-description {
@@ -455,9 +492,26 @@ html.active {
 }
 
 .footer-navigation-left .footer-navigation-item {
+  transition: 0.5s;
   margin: 0 0 17px 0;
   padding: 16px 0 16px 55px;
   cursor: pointer;
+}
+
+.footer-navigation-left .footer-navigation-item:hover,
+.footer-navigation-center .footer-navigation-item:hover,
+.footer-navigation-left .footer-navigation-item:active,
+.footer-navigation-center .footer-navigation-item:active
+ {
+  transition: 0.5s;
+  box-shadow: 0px 2px 10px brown;
+}
+
+.footer-navigation-left .footer-navigation-item:active,
+.footer-navigation-center .footer-navigation-item:active
+ {
+  transition: 0.5s;
+  box-shadow: 0px 1px 5px brown;
 }
 
 .footer-navigation-center .footer-navigation-item {
@@ -472,6 +526,7 @@ html.active {
 }
 
 .footer-navigation-center .footer-navigation-link {
+  transition: 0.5s;
   text-decoration: none;
   font-family: Georgia;
   font-weight: 400;
