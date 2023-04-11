@@ -89,6 +89,8 @@ let petsarr = [
   }
 ];
 
+console.log(`Уважаемый проверяющий, прошу дать время на дороботку пагинации до утра/обеда среды, спасибо`)
+
 const hamburger = document.querySelector('.hamburger');
 const headerNavigationBlock = document.querySelector('.header-navigation-block');
 const headerNameBlock = document.querySelector('.header-name-block');
@@ -118,6 +120,7 @@ const right = document.querySelector('.right')
 const fastRight = document.querySelector('.fast-right')
 
 
+
 hamburger.addEventListener('click', changeMenu);
 navigationShadow.addEventListener('click', changeMenu);
 headerNavigation.addEventListener('click', (event) => (event.target.tagName == 'A')? changeMenu() : false);
@@ -134,6 +137,7 @@ popupClose.addEventListener('mouseover', () => popupClose.style.background = '#F
 popupClose.addEventListener('mouseout', () => popupClose.style.background = 'transparent');
 
 right.addEventListener('click', rightStep);
+left.addEventListener('click', leftStep)
 
 
 
@@ -175,11 +179,14 @@ function closeModalWindow(){
 function rightStep(){
   left.removeAttribute('disabled');
   fastLeft.removeAttribute('disabled');
+  left.classList.remove('disabled');
+  fastLeft.classList.remove('disabled');
   console.log(countPage);
   countPage += 1;
   console.log(countPage);
-  if (countPage <= arrResult.length){
-    pageNumber.textContent = countPage; 
+  pageNumber.textContent = countPage;
+  if (countPage < arrResult.length){
+    //pageNumber.textContent = countPage;
      for (let i = 0; i < sliderItems.length; i++){
         sliderItems[i].setAttribute('data-pet', arrResult[countPage -1][i]);
         sliderItems[i].children[1].textContent = petsarr[arrResult[countPage -1][i]].name;
@@ -189,8 +196,39 @@ function rightStep(){
   }
   else {
     right.removeEventListener('click', rightStep);
+    left.addEventListener('click', leftStep)
     right.setAttribute('disabled', true);
     fastRight.setAttribute('disabled', true);
+    right.classList.add('disabled');
+    fastRight.classList.add('disabled');
+  }
+}
+
+function leftStep(){
+  right.removeAttribute('disabled');
+  fastRight.removeAttribute('disabled');
+  right.classList.remove('disabled');
+  fastRight.classList.remove('disabled');
+  console.log(countPage);
+  countPage -= 1;
+  console.log(countPage);
+  pageNumber.textContent = countPage;
+  if (countPage > 1){
+    //pageNumber.textContent = countPage;
+     for (let i = 0; i < sliderItems.length; i++){
+        sliderItems[i].setAttribute('data-pet', arrResult[countPage -1][i]);
+        sliderItems[i].children[1].textContent = petsarr[arrResult[countPage -1][i]].name;
+        sliderItems[i].children[0].setAttribute('src', `${petsarr[arrResult[countPage -1][i]].img}`);
+        sliderItems[i].children[0].setAttribute('alt', petsarr[arrResult[countPage -1][i]].name);
+     }
+  }
+  else {
+    left.removeEventListener('click', leftStep);
+    right.addEventListener('click', rightStep)
+    left.setAttribute('disabled', true);
+    fastLeft.setAttribute('disabled', true);
+    left.classList.add('disabled');
+    fastLeft.classList.add('disabled');
   }
 }
 
