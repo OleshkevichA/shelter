@@ -282,7 +282,8 @@ function changeMenu (){
 
 // open modal window
 function openModalWindow(event) {
-  let number = +event.path[1].getAttribute('data-pet');
+  console.log(event)
+  let number = +event.currentTarget.getAttribute('data-pet');
   popupTitle.textContent = petsarr[number].name;
   popupKinds.textContent = `${petsarr[number].type} - ${petsarr[number].breed}`;
   popupImg.setAttribute('src', `${petsarr[number].img}`);
